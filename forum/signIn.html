@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign-in</title>
+    <link type="text/css" rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+                Mr.Wen Forum</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right" style="margin-right: 20px; font-size: 18px">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="info container">
+    <div class="jumbotron" style="margin-top: 100px">
+        <div class="container">
+            <h2>Welcome to Mr.Wen Forum!</h2>
+
+            <h3>Login and have fun!</h3>
+
+            <h3>If you don't have any account, please register one right now!</h3>
+
+            <div class="collapse navbar-collapse" style="margin-left: -25px">
+                <form id="loginForm" class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="Password" placeholder="Password">
+                    </div>
+                    <button type="button" id="loginBtn" class="btn btn-primary">Login</button>
+                    <a class="btn btn-success" data-toggle="modal" data-target="#register">Create new account</a>
+                </form>
+            </div>
+
+            <div id="loginWaring" class="alert alert-danger col-md-5" role="alert" hidden>
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container navbar-fixed-bottom" style="margin-top: 5%">
+    <hr/>
+    <footer>
+        <p style="text-align: center">&copy;Wen Shuai 2016</p>
+    </footer>
+</div>
+
+<div class="container">
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel">
+        <div class="modal-dialog" role="document" style="width: 400px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 style="text-align: center"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Create new account</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="Name" class="control-label">昵称</label>
+                            <input type="text" placeholder="User Name" class="form-control" id="user_name" name="Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label">邮箱</label>
+                            <input type="email" placeholder="Email" class="form-control" id="email" name="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">密码</label>
+                            <input type="password" placeholder="Password" class="form-control" id="password" name="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_password" class="control-label">确认密码</label>
+                            <input type="password" placeholder="Enter password again" class="form-control" id="confirm_password"
+                                   name="ConfirmPassword">
+                        </div>
+                        <div id="registerWaring" class="alert alert-danger" role="alert" hidden>
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancle</button>
+                    <button type="submit" id="registerBtn" class="btn btn-primary">Create & Login!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../JS/jquery-2.1.4.min.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../JS/signIn.js"></script>
+</body>
+</html>
+
